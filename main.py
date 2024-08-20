@@ -37,11 +37,15 @@ while cap.isOpened():
                 else:
                     class_counts[cls_name] = 1
 
-        deteksi_txt.write("Waktu {:.2f}s: ".format(current_time))
+        minutes = int(current_time // 60)
+        seconds = int(current_time % 60)
+
+        deteksi_txt.write("Time: {}m:{}s: ".format(minutes, seconds))
         for cls_name, count in class_counts.items():
             deteksi_txt.write("[{}: {}] ".format(cls_name, count))
         deteksi_txt.write("\n")
 
+# Release resources
 cap.release()
 deteksi_txt.close()
 
