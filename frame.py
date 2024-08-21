@@ -1,7 +1,7 @@
 import cv2
 import os
 
-home_directory = os.path.expanduser('D:/Download/perkuliahan/yolo/Floater ocean and river garbage/')
+home_directory = os.path.expanduser('path/to/your/home')
 r_path = os.path.join(home_directory, "Result", "Representative.txt")
 video_path = os.path.join(home_directory, 'Source', 'video2.mp4')
 output_dir = os.path.join(home_directory, 'Result', 'Capture')
