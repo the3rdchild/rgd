@@ -4,19 +4,20 @@ from ultralytics import YOLO
 import os
 
 home_directory = os.path.expanduser('D:/Download/perkuliahan/yolo/Floater ocean and river garbage/')
-model_path = os.path.join(home_directory, 'best.pt')
-video_path = os.path.join(home_directory, 'video.mp4')
+model_path = os.path.join(home_directory, 'Model', 'best.pt')
+video_path = os.path.join(home_directory, 'Source', 'video2.mp4')
 result_path = os.path.join(home_directory, 'Result', 'Result.txt')
 final_result_path = os.path.join(home_directory, 'Result', 'Tresult.txt')
 
+######################### DETECT #########################
 model = YOLO(model_path)
-
 cap = cv2.VideoCapture(video_path)
 
 if not cap.isOpened():
     print("Error: Could not open video.")
     exit()
 
+######################### RECORD DETECTED OBJECT #########################
 frame_count = 0
 deteksi_interval = 3  # Interval detection in seconds
 fps = int(cap.get(cv2.CAP_PROP_FPS))
@@ -52,7 +53,7 @@ while cap.isOpened():
 
         deteksi_txt.write("Time: {}m:{}s: ".format(minutes, seconds))
         for cls_name, count in class_counts.items():
-            deteksi_txt.write("[{}: {}] ".format(cls_name, count))
+            deteksi_txt.write("{}: {} ".format(cls_name, count))
             if cls_name in total_counts:
                 total_counts[cls_name] += count
         deteksi_txt.write("\n")
@@ -65,3 +66,14 @@ with open(final_result_path, "w") as final_result_txt:
         final_result_txt.write("{}: {}\n".format(cls_name, total))
 
 print("Detections finished. Results are in result.txt and Tresult.txt")
+
+######################### DETAIL OF THE VIDEO #########################
+video = cv2.VideoCapture(video_path)
+total_frames = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
+FPS = video.get(cv2.CAP_PROP_FPS)
+MS = total_frames * 1000 / FPS
+ALL = f"Total Video Frame: {total_frames}", f"Video FPS: {FPS}", f"Video Duration: {MS} ms"
+video.release()
+
+f = open(final_result_path, "a")
+f.write(str(ALL))
