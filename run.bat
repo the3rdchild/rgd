@@ -1,4 +1,4 @@
 @echo off
-main.py
-frame.py
-boxing.py
+python -u main.py
+python -u frame.py
+python -u boxing.py
