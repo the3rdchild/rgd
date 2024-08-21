@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 import os
 
-home_directory = os.path.expanduser("D:\Download\perkuliahan\yolo\Floater ocean and river garbage")
+home_directory = os.path.expanduser("path/to/your/home")
 image_path = os.path.join(home_directory,"Result", "Capture")
 image_out = os.path.join(home_directory,"Result", "Capture")
 model_path = os.path.join(home_directory, 'Model', 'best.pt')
