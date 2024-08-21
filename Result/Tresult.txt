@@ -1,0 +1,4 @@
+Glass: 0
+Metal: 0
+Plastic: 33
+('Total Video Frame: 628', 'Video FPS: 30.0', 'Video Duration: 20933.333333333332 ms')
