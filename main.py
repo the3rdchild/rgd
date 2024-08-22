@@ -17,7 +17,7 @@ if not cap.isOpened():
     print("Error: Could not open video.")
     exit()
 
-######################### RECORD DETECTED OBJECT #########################
+######################### RECORD DETECTED OBJECT ###########################
 frame_count = 0
 deteksi_interval = 3  # Interval detection in seconds
 fps = int(cap.get(cv2.CAP_PROP_FPS))
