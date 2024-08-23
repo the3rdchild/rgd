@@ -37,7 +37,6 @@ with open(r_path, 'a') as f:
 
 ######################### SAVE REPRESENTATIVE IMAGES #########################
 def parse_representative_times(r_path):
-    # Extract minute and second timings from the representative file
     representative_times = []
     with open(r_path, 'r') as file:
         for line in file:
@@ -46,16 +45,13 @@ def parse_representative_times(r_path):
                 if "(" in part and ")" in part:
                     time_str = part.split('(')[1].split(')')[0]
                     minutes, seconds = time_str.split('m')
-                    # Handle different formats and clean up the seconds string
                     seconds = seconds.replace(':', '').replace('s', '').strip()
                     minutes = int(minutes)
                     total_seconds = minutes * 60 + int(seconds)
                     representative_times.append(total_seconds)
     return representative_times
 
-# Adjusted function to parse representative times along with classes
 def parse_representative_times_with_classes(r_path):
-    # Extract minute and second timings along with classes from the representative file
     times_classes = []
     with open(r_path, 'r') as file:
         for line in file:
@@ -66,11 +62,9 @@ def parse_representative_times_with_classes(r_path):
                     time_str = part.split('(')[1].split(')')[0]
                     class_name = part.split('(')[0].strip().capitalize()
                     
-                    # Handle cases where class_name is empty
                     if not class_name:
                         class_name = 'No Object'
                     
-                    # Ensure time string is correctly parsed
                     minutes, seconds = time_str.split('m')
                     seconds = seconds.replace(':', '').replace('s', '').strip()
                     total_seconds = int(minutes) * 60 + int(seconds)
@@ -90,10 +84,8 @@ def capture_frames_at_times(video, times_classes, path_output_dir):
             vidcap.set(cv2.CAP_PROP_POS_MSEC, time_sec * 1000)  # Move to the specific time
             success, image = vidcap.read()
             if success:
-                # Clean up class name by removing unwanted prefixes and extra details
                 class_name = class_name.split(":")[-1].split("(")[0].strip().capitalize()  # Extract the actual class name
 
-                # Format the file name as "[minute] [class].png"
                 frame_name = os.path.join(path_output_dir, f'{minute} {class_name}.png')
                 cv2.imwrite(frame_name, image)
                 print(f"Captured frame at {time_sec} seconds, saved as {frame_name}")
