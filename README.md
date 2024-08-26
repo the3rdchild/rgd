@@ -1,4 +1,4 @@
-
+## <div align="center">RIVER GARBAGE DETECTION</div>
 <h1 align="center">
  <img src="https://github.com/the3rdchild/rgd/blob/main/doc/banner2.png" />
 </h1>
