@@ -8,4 +8,31 @@ git clone https://github.com/the3rdchild/rgd/
 ```
 
 ## Windows
-Use [run.bat](https://github.com/the3rdchild/rgd/blob/main/run.bat) to run the program with the default model of yolov8 is in the 
+Use [run.bat](https://github.com/the3rdchild/rgd/blob/main/run.bat) to run the program. this batch file contain simpel program to run all the python file sequently:
+```
+@echo off
+python -u main.py
+python -u frame.py
+python -u boxing.py
+```
+
+## Linux
+Use [run.sh](https://github.com/the3rdchild/rgd/blob/main/run.sh) to run the program. this bash file contain simpel program to run all the python file sequently:
+```
+#!/bin/bash
+python3 main.py
+python3 frame.py
+python3 boxing.py
+```
+
+## <div align="center">YoloV8 Model</div>
+
+the defaul model of yolo is yolov8 located in the [yolov8 model](https://github.com/the3rdchild/rgd/blob/main/Model/) folder with default name:
+```
+model.pt
+```
+
+you can also train your own model and change the class to your data class(es) in [main.py](https://github.com/the3rdchild/rgd/main.py) line 27:
+```
+total_counts = {"your": 0, "own": 0, "class": 0}
+```
