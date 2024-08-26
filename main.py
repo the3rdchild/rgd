@@ -4,7 +4,7 @@ from ultralytics import YOLO
 import os
 
 home_directory = os.path.expanduser('path/to/your/home')
-model_path = os.path.join(home_directory, 'Model', 'best.pt')
+model_path = os.path.join(home_directory, 'Model', 'model.pt')
 video_path = os.path.join(home_directory, 'Source', 'video2.mp4')
 result_path = os.path.join(home_directory, 'Result', 'Result.txt')
 final_result_path = os.path.join(home_directory, 'Result', 'Tresult.txt')
