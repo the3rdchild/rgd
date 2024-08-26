@@ -3,7 +3,7 @@
  <img src="https://github.com/the3rdchild/rgd/blob/main/doc/banner2.png" />
 </h1>
 
-[RGD](https://github.com/the3rdchild/rgd/) is a simple code that can detect river floating garbage and take note of the time stamp from the video taken and save the representative images of each minute in the folder [Result](https://github.com/the3rdchild/rgd/Result) as the clear image without box (detected image) also the folder containe box in [Inference](https://github.com/the3rdchild/rgd/Result/inference).
+[RGD](https://github.com/the3rdchild/rgd/) is a simple code that can detect river floating garbage and take note of the time stamp from the video taken and save the representative images of each minute in the folder [Result](https://github.com/the3rdchild/rgd/tree/main/Result/Capture) as the clear image without box (detected image) also the folder containe box in [Inference](https://github.com/the3rdchild/rgd/tree/main/Result/Capture/inference).
 
 ## <div align="center">Documentation</div>
 
@@ -32,7 +32,7 @@ python3 boxing.py
 
 ## <div align="center">YoloV8 Model</div>
 
-the defaul model of yolo is yolov8 located in the [yolov8 model](https://github.com/the3rdchild/rgd/blob/main/Model/) folder with default name:
+the defaul model of yolo is yolov8 located in the [model](https://github.com/the3rdchild/rgd/blob/main/Model/) folder with default name:
 ```
 model.pt
 ```
