@@ -1,3 +1,8 @@
+
+<h1 align="center">
+ <img src="https://github.com/the3rdchild/rgd/blob/main/doc/banner.png" />
+</h1>
+
 [RGD](https://github.com/the3rdchild/rgd/) is a simple code that can detect river floating garbage and take note of the time stamp from the video taken and save the representative images of each minute in the folder [Result](https://github.com/the3rdchild/rgd/Result) as the clear image without box (detected image) also the folder containe box in [Inference](https://github.com/the3rdchild/rgd/Result/inference).
 
 ## <div align="center">Documentation</div>
