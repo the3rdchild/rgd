@@ -4,7 +4,7 @@ import os
 home_directory = os.path.expanduser("path/to/your/home")
 image_path = os.path.join(home_directory,"Result", "Capture")
 image_out = os.path.join(home_directory,"Result", "Capture")
-model_path = os.path.join(home_directory, 'Model', 'best.pt')
+model_path = os.path.join(home_directory, 'Model', 'model.pt')
 
 model = YOLO(model_path)
 detect = model(image_path, 
