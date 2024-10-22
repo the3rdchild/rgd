@@ -2,8 +2,12 @@
 <h1 align="center">
  <img src="https://github.com/the3rdchild/rgd/blob/main/doc/banner2.png" />
 </h1>
+<div align="center">
+ <a href="https://github.com/the3rdchild/rgd/">RGD</a> is a simple code that can detect river floating garbage and take note of the time stamp from the video taken and save the representative images of each minute in the folder <a href="https://github.com/the3rdchild/rgd/tree/main/Result/Capture">Result</a> as the clear image without box (detected image) also the folder containe box in <a href="https://github.com/the3rdchild/rgd/tree/main/Result/Capture/inference">Inference</a>.
+</div>
 
-[RGD](https://github.com/the3rdchild/rgd/) is a simple code that can detect river floating garbage and take note of the time stamp from the video taken and save the representative images of each minute in the folder [Result](https://github.com/the3rdchild/rgd/tree/main/Result/Capture) as the clear image without box (detected image) also the folder containe box in [Inference](https://github.com/the3rdchild/rgd/tree/main/Result/Capture/inference).
+
+
 
 ## <div align="center">Documentation</div>
 
