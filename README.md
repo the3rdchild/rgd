@@ -16,6 +16,11 @@ This code is using pyhton with minimum requarement is [**Python>=3.8**](https://
 git clone https://github.com/the3rdchild/rgd/
 ```
 
+install [requirements.txt](https://github.com/the3rdchild/rgd/blob/main/requirements.txt) using:
+```git
+pip install requirements.txt
+```
+
 ## Windows
 Use [run.bat](https://github.com/the3rdchild/rgd/blob/main/run.bat) to run the program. this batch file contain simpel program to run all the python file sequently:
 ```
