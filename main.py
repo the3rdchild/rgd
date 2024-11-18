@@ -1,13 +1,8 @@
 import cv2
 import time
 from ultralytics import YOLO
-import os
 
-home_directory = os.path.expanduser('path/to/your/home')
-model_path = os.path.join(home_directory, 'Model', 'model.pt')
-video_path = os.path.join(home_directory, 'Source', 'video2.mp4')
-result_path = os.path.join(home_directory, 'Result', 'Result.txt')
-final_result_path = os.path.join(home_directory, 'Result', 'Tresult.txt')
+from path import model_path, video_path, result_path, final_result_path
 
 ######################### DETECT #########################
 model = YOLO(model_path)
