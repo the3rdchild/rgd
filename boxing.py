@@ -1,6 +1,5 @@
 from ultralytics import YOLO
-import os
-
+from path import image_out, image_path, model_path
 
 model = YOLO(model_path)
 detect = model(image_path, 
