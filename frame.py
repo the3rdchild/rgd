@@ -1,10 +1,10 @@
 import cv2
 import os
 
-
+from path import rgd, r_path, video_path, output_dir
 
 ######################### SAVE THE DETECTED OBJECT RESULT AS REPRESENTATIVE #########################
-with open(os.path.join(home_directory, "Result", 'Result.txt'), 'r') as file:
+with open(os.path.join(rgd, "Result", 'Result.txt'), 'r') as file:
     lines = file.readlines()
 minute_dict = {}
 
