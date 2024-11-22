@@ -1,5 +1,5 @@
 total_counts = {
-   "plastic" : 0,
-   "metal" : 0,
-   "botol" : 0
+   "Glass": 0, 
+   "Metal": 0, 
+   "Plastic": 0
 }
