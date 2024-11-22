@@ -7,6 +7,7 @@ model_path = os.path.join(rgd, 'Model', 'model.pt')
 video_path = os.path.join(rgd, 'Source', 'video2.mp4')
 result_path = os.path.join(rgd, 'Result', 'Result.txt')
 final_result_path = os.path.join(rgd, 'Result', 'Tresult.txt')
+class_path = os.path.join(rgd, 'class_names.py')
 
 frame
 r_path = os.path.join(rgd, "Result", "Representative.txt")
