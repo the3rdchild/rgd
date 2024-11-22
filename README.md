@@ -46,7 +46,7 @@ the defaul model of yolo is yolov8 located in the [model](https://github.com/the
 model.pt
 ```
 
-you can also train your own model and change the class to your data class(es) in [class_names.py](https://github.com/the3rdchild/rgd/class_names.py) line 27:
+you can also train your own model and change the class to your data class(es) in [class_names.py](https://github.com/the3rdchild/rgd/class_names.py):
 ```
 total_counts = {"your": 0, "own": 0, "class": 0}
 ```
