@@ -2,7 +2,7 @@ import cv2
 import time
 from ultralytics import YOLO
 
-from path import model_path, video_path, result_path, final_result_path
+from path import model_path, video_path, result_path, final_result_path, class_path 
 
 ######################### DETECT #########################
 model = YOLO(model_path)
@@ -19,7 +19,7 @@ fps = int(cap.get(cv2.CAP_PROP_FPS))
 deteksi_txt = open(result_path, "w")
 deteksi_txt.write("Interval {} seconds:\n".format(deteksi_interval))
 
-total_counts = {"Glass": 0, "Metal": 0, "Plastic": 0}
+class_path = total_counts
 
 while cap.isOpened():
     ret, frame = cap.read()
